@@ -19,6 +19,8 @@ float altura;
     std::cout<<"Voce tem "<<idade<<" anos"<<std::endl;
     std::cout<<"Voce tem "<<altura<<" metros"<<std::endl;
 
+    std::cout<<"teste"<<std::endl;
+
 
     return 0;
 }
