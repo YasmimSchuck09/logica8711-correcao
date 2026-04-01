@@ -2,13 +2,13 @@
 
 int main(){
 
-int a = 10;
-int b = 6;
+bool condicao = true;
+//bool é usado para condição, ou seja, verdadeiro ou falso
 
-std::cout<<((a > b) && (a + b) >= 16)<<std::endl;
-// && é uma necessidade 
-std::cout<<((a > b) || (a + b) >= 16)<<std::endl;
-// || é uma opção
+bool condicao1 = false;
+
+std::cout<<condicao<<std::endl;
+std::cout<<condicao1<<std::endl;
 
     return 0;
 }
