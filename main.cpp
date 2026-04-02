@@ -1,30 +1,14 @@
 #include<iostream>
-#include<string>
 
 int main(){
 
-//solicite ao usuário para ele digitar nome (primeiro nome)
-//colocar a idade 
-//fazer o calculo para que diga que ano nasceu 
-//no final mostre o nome da pessoa.. você nasceu no ano..
+    int result1 = 4 + 4 * 2;
+    int result2 = 4 + 2 / 2;
+    int result3 = (4 + 4) * 2;
 
-std::string nome;
-int idade;
-int anoAtual = 2026;
-int result;
-
-std::cout<<"Qual seu nome: "<<std::endl;
-std::cin>>nome;
-std::cout<<"Qual sua idade: "<<std::endl;
-std::cin>>idade;
-result = anoAtual - idade;
-std::cout<<result<<std::endl; 
-
-std::cout<<"Boa noite "<<nome<<"!!"<<std::endl;
-std::cout<<"Você tem "<<idade<<" anos."<<std::endl;
-std::cout<<" e seu ano de nascimento é: "<<result;
-
-
+    std::cout<<result1<<std::endl;
+    std::cout<<result2<<std::endl;
+    std::cout<<result3<<std::endl;
 
     return 0;
 }
