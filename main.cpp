@@ -3,10 +3,11 @@
 
 int main(){
 
-      std::string nome = "Yasmim";
+int yasmim[5] = {10,20,30,40,50};
+//na programação sempre começamos a cotagem pelo 0 (0=10)
 
-      std::cout<<"Nome tem: "<<nome.length()<<" Letras."<<std::endl;
-      std::cout<<"Nome tem: "<<nome.size()<<" Letras."<<std::endl;
+std::cout<<yasmim[1];
+//(1=20)
 
       return 0;
 }
