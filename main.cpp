@@ -3,11 +3,13 @@
 
 int main(){
 
-int yasmim[5] = {10,20,30,40,50};
-//na programação sempre começamos a cotagem pelo 0 (0=10)
+std::string nome = "Yasmim";
 
-std::cout<<yasmim[1];
-//(1=20)
+std::cout<<nome[0]<<std::endl;
+std::cout<<nome[2]<<std::endl;
+std::cout<<nome[nome.length() - 1]<<std::endl;
+nome[0] = 'Y';
+std::cout<<nome<<std::endl;
 
       return 0;
 }
