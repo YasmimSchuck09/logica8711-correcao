@@ -1,33 +1,30 @@
 #include<iostream>
+#include<string>
 
 int main(){
 
-int opcaoPagamento;
-int qtdParafuso;
-float valorParafuso = 1.40;
-float valortotalParafuso;
-float desconto;
+std::string nome;
+int idade;
+float altura;
 
-std::cout<<"Digite a quantidade de parafusos desejada: "<<std::endl;
-std::cin>>qtdParafuso;
+std::cout<<"Digite seu nome: "<<std::endl;
+std::cin>>nome;
 
-valortotalParafuso = qtdParafuso * valorParafuso;
+std::cout<<"Digite sua altura: "<<std::endl;
+std::cin>>altura;
 
-std::cout<<"Qual a forma de pagamento: "<<std::endl;
-std::cout<<"--- 1 - Pix"<<std::endl;
-std::cout<<"--- 2 - Dinheiro"<<std::endl;
-std::cout<<"--- 3 - Cartao"<<std::endl;
-std::cin>>opcaoPagamento;
+std::cout<<"Digite sua idade: "<<std::endl;
+std::cin>>idade;
 
-if(opcaoPagamento == 1){
-      std::cout<<"Sua compra ficou no valor total de R$: "<<valortotalParafuso<<std::endl;
-}else if(opcaoPagamento == 2){
-      desconto = valortotalParafuso * 0.90;
-      std::cout<<"Sua compra ficou no valor total de R$:"<<desconto<<std::endl;
+if(idade <= 10){
+      std::cout<<"Voce se encontra na classificação infantil!"<<std::endl;
+}else if(idade <= 18){
+      std::cout<<"Voce se encontra na classificação adolescente!"<<std::endl;
+}else if(idade <= 60){
+      std::cout<<"Voce se encontra na classificação adulta!"<<std::endl;
 }else{
-      std::cout<<"Sua compra ficou no valor total de R$: "<<valortotalParafuso<<std::endl;
+      std::cout<<"Voce se encontra na classificação Senior!"<<std::endl;
 }
-
 
       return 0;
 }
