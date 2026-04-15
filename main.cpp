@@ -1,16 +1,13 @@
 #include<iostream>
-#include<thread> //para lidar com o tempo de execução
-#include<chrono> //para definir unidades de tempo (ms, segundos)
 
 int main(){
 
-      for(int i = 10; i >= 0; i--){
-            std::cout<<"A bomba ira explodir em.. "<<i<<std::endl;
+int tabuada = 7;
 
-            std::this_thread::sleep_for(std::chrono::milliseconds(200)); 
-            //tempo em que ocorre a contagem
-            //seconds => milliseconds
-      }
+for(int i = 0; i <=10; i++){
+      std::cout<<"O resultado de "<<tabuada<<" x "<<i<<" = "<<tabuada * i<<std::endl;
+      //tudo o que estiver dentro das aspas é um texto literal 
+}
 
       
       return 0;
