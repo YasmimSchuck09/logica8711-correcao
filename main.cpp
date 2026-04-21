@@ -1,15 +1,17 @@
 #include <iostream>
-#include<string>
 
 int main(){
 
-std::string letras[2][4] = {
-      {"A", "B", "C", "D"},
-      {"E", "F", "G", "H"},
-};
+      int contagem = 10;
 
-std::cout<<letras[1][0]<<std::endl;
-//contagem sempre começa do 0, ou seja 1= fila 1, letra 0
+//for = sei quantas interações terão
+//while = não sei quantas interações terão 
+      while(contagem > 0){
+            std::cout<<contagem<<std::endl;
+            contagem--;
+      }
+
+      std::cout<<"Feliz ano novo!!"<<std::endl;
 
       return 0;
 }
