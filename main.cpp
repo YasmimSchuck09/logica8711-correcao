@@ -2,20 +2,15 @@
 
 int main(){
 
-      int num;
+      int quantidade;
 
       do{
-            std::cout<<"Digite um valor para num: "<<std::endl;
-            std::cin>>num;
-
-            if(num < 1 || num > 10){
-                  std::cout<<"Entrada invalida!"<<std::endl;
-            }
-      }while(num < 1 || num > 10);{
-            std::cout<<"Obrigado! Voce escolheu o numero: "<<std::endl;
+            std::cout<<"Digite a quantidade em estoque (Deve ser maior que 0): "<<std::endl;
+            std::cin>>quantidade;
       }
+      while(quantidade <= 0);
 
-            //caso ocorra a edição de um numero que não esteja nesse meio o código while não vai rodar
+      std::cout<<"Estoque atualizado: "<<quantidade<<" unidades."<<std::endl;
 
 
       return 0;
