@@ -1,12 +1,17 @@
 #include <iostream>
+#include<vector>
 
 int main(){
 
-for(int i = 0; i <10; i++){
-      if(i == 4){
-            break;
-      }
-      std::cout<<i<<std::endl;
+std::vector<std::string>cars = {"Volvo", "BMW", "Mercedes"};
+//vector é utilizado quando não sabemos a quantidade de itens. 
+
+cars.push_back("Mazda");
+//push back = é o item que ficara por ultimo na lista, item final. 
+
+for(std::string car : cars){ //esta parte faz a função do for each
+      std::cout<<car<<std::endl;
+
 }
 
       return 0;
