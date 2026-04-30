@@ -3,26 +3,30 @@
 
 int main(){
 
+//blAlmount: valor em reais| exchangeRate: Taxa de Câmbio| usAlmount: Valor em dólares
+double brlAmount, exchangeRate, usdAmount;
 int choice;
-float temp, converted;
 
-std::cout<<"------ Temperature converter ------"<<std::endl;
-std::cout<<"1: Celsius to Fahrenheit"<<std::endl;
-std::cout<<"2: Fahrenheit to Celsius"<<std::endl;
-std::cout<<"Choose an option (1 or 2): "<<std::endl;
-std::cin>>choice;
-if(choice == 1){
-      std::cout<<"Enter temperature in celsius: "<<std::endl;
-      std::cin>>temp;
-      converted = (temp * 1.8) + 32;
-      std::cout<<temp<<"C in "<<converted<<"F."<<std::endl;
-}else if(choice == 2){
-      std::cout<<"Enter tamperature in Fahrenheit: "<<std::endl;
-      std::cin>>temp;
-      converted = (temp - 32) / 1.8;
-      std::cout<<temp<<"F is"<<converted<<"C."<<std::endl;
-}else{
-      std::cout<<"Invalid Option! Please restart."<<std::endl;
-}
+std::cout<<"---- Currency Converter: BRL to USD ------"<<std::endl;
+
+//Entreda de taxa de câmbio (quanto vale 1 dolar hoje)
+
+      std::cout<<"Enter de current exchange rate ( How much is 1 dollar in Reais?)"<<std::endl;
+      std::cin>>exchangeRate;
+
+      // Entrada da quantia em reaisque a pessoa deseja converter
+      std::cout<<"Enter the amount in BRL(R$): "<<std::endl;
+      std::cin>>brlAmount;
+
+      //Verificação lógica: garante que o valor informado seja positivo 
+      if(brlAmount > 0){
+            //cálculo divide o montante em reais pela taxa de câmbio
+            usdAmount = brlAmount / exchangeRate;
+            std::cout<<"You will have $"<<usdAmount<<" US Dollars."<<std::endl;
+      }else{
+            //Mensagem de erro caso o vlaor seja zero ou negativo
+            std::cout<<"Error: Please enter a valid amount grater than zero."<<std::endl;
+      }
+
       return 0;
 }
