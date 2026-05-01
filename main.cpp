@@ -3,20 +3,15 @@
 
 int main(){
 
-int num;
-float resultado;
+int totalSeconds;
 
-std::cout<<"Digite um valor para num: "<<std::endl;
-std::cin>>num;
+std::cout<<"Enter total seconds: "<<std::endl;
+std::cin>>totalSeconds;
 
-std::cout<<num%2<<std::endl;
- if(num % 2 == 0){
-      std::cout<<"O numero digitado é par"<<std::endl;
- }else if(num % 2 == 1){
-      std::cout<<"O numero digitado é impar"<<std::endl;
- }else{
-      std::cout<<"Numero invalido"<<std::endl;
- }
+int minutes = totalSeconds / 60;
+int seconds = totalSeconds % 60;
+
+std::cout<<"Time: "<<minutes<<" minutes and "<<seconds<<" seconds."<<std::endl;
  
   return 0;
 }
