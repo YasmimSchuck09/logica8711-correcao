@@ -1,50 +1,67 @@
 #include<iostream>
 
-int main(){
+float somar(float a, float b){
+  return a + b;
+}
 
-int num1, num2, soma, subt, mult;
-float div;
-int op;
+float subtrair(float a, float b){
+  return a - b;
+}
 
-std::cout<<"Digite aqui o valor para o numero 1: "<<std::endl;
-std::cin>>num1;
+float multiplicar(float a, float b){
+  return a * b;
+}
 
-std::cout<<"Digite aqui o valor para o numero 2: "<<std::endl;
-std::cin>>num2;
+float dividir(float a, float b){
+  return a / b;
+}
 
+void coletarNumeros(float &a, float &b){ // aqui quando botamos & na frente dos numeros quer dizer que no main poderemos modificar o numero
+  std::cout<<"Digite um valor para a: "<<std::endl;
+  std::cin>>a;
 
-std::cout<<"-----Escolha a operacao------"<<std::endl;
-std::cout<<"1 - Soma";
-std::cout<<"2 - Subtracao";
-std::cout<<"3 - Multiplicacao";
-std::cout<<"4 - Divisao";
-std::cin>>op;
+  std::cout<<"Digite um valor para b: "<<std::endl;
+  std::cin>>b;
 
-switch(op){
-  case 1:
-  soma = num1 + num2;
-  std::cout<<"O resultado da soma e: "<<soma<<std::endl;
-  break;
+}
 
-  case 2:
-  subt = num1 - num2;
-  std::cout<<"O resultado da sua subtracao é: "<<subt<<std::endl;
-  break;
+void exibirResultado(float &a, float &b){
+  coletarNumeros(a, b);
 
-  case 3:
-  mult = num1 * num2;
-  std::cout<<"O resultado de sua multiplicacao e: "<<mult<<std::endl;
-  break;
+  int op;
+  std::cout<<"Digite um opcao: "<<std::endl;
+  std::cout<<"1 - somar"<<std::endl;
+  std::cout<<"2 - subtrair"<<std::endl;
+  std::cout<<"3 - multiplicar"<<std::endl;
+  std::cout<<"4 - dividir"<<std::endl;
+  std::cin>>op;
 
-  case 4:
-  div = num1 / num2;
-  std::cout<<"O resultado de sua divisao e: "<<div<<std::endl;
-  break;
+  switch(op){
+    case 1: 
+    std::cout<<"O resultado e: "<<somar(a, b)<<std::endl;
+    break;
 
-  default:
-  std::cout<<"Voce na oinseriu um valor valido!"<<std::endl;
+    case 2: 
+    std::cout<<"O resultado e: "<<subtrair(a, b)<<std::endl;
+    break;
 
+    case 3:
+    std::cout<<"O resultado e: "<<multiplicar(a, b)<<std::endl;
+    break;
+
+    case 4:
+    std::cout<<"O resultado e: "<<dividir(a, b)<<std::endl;
+    break;
+
+    default:
+    std::cout<<"Voce digitou um valor invalido!"<<std::endl;
   }
 
-    return 0;
+}
+
+int main(){
+  float num1 = 0, num2 = 0;
+  exibirResultado(num1, num2);
+
+  return 0;
 }
