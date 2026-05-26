@@ -1,28 +1,24 @@
 #include<iostream>
 
-long long calcularFatorial(int n){
-    long long resultado = 1;
+int quadrado(int n){
+    return n * n;
+}
 
-    for(int i = 1; i <=  n; i++){
-        resultado *= i;
-    }
-
-    return resultado; 
+int cubo(int n){
+    return n * n * n;
 }
 
 int main(){
-    int numero;
 
-    std::cout<<"Digite um numero para calcular fatorial: "<<std::endl;
-    std::cin>>numero;
+    std::cout<<"Quadrado de 5: "<<quadrado(5)<<std::endl;
+    std::cout<<"Quadrado de 8: "<<quadrado(8)<<std::endl;
+    std::cout<<"Quadrado de 10: "<<quadrado(10)<<std::endl;
 
-    if(numero < 0){
-        std::cout<<"Erro: Fatorial de numero negativo nao existe!"<<std::endl;
-    }else{
-        long long fatorial = calcularFatorial(numero);
-        std::cout<<numero<<"! = "<<fatorial<<std::endl;
-    }
+
+    std::cout<<"Cubo de 2: "<<cubo(2)<<std::endl;
+    std::cout<<"Cubo de 5: "<<cubo(5)<<std::endl;
+    std::cout<<"Cubo de 3: "<<cubo(3)<<std::endl;
+    
+
+    return 0;
 }
-
-// este é o exemplo da ulização do long long quando precisamos calcular o valor fatorial: 
-// exemplo: 5 é o numero escohido, então ele precisa se multiplicar com o numero anterior: 5x4: 20
