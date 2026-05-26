@@ -1,22 +1,14 @@
 #include<iostream>
+#include<format>
+#include<string>
 
 int main(){
 
-    int numero;
-    int contador = 0;
+    std::string nome = "Eduardo";
 
-    while(true){
-        std::cout<<"Digite um numero (0 para parar):";
-        std::cin>>numero;
+    std::string mensagem = std::format("Ola, {}! Voce tem {} anos. \n", nome);
+    std::cout<<mensagem;
 
-        if(numero == 0){
-            break;
-        }
-
-        contador++;
-    }
-
-    std::cout<<"Voce digitou "<<contador<<" numeros!"<<std::endl;
 
     return 0;
 }
