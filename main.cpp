@@ -1,7 +1,6 @@
 #include<iostream>
 
-
-int fibonacci(int n){
+int fibonacci(int n){   // exemplificação da conta(soma) do fibonacci 
     std::cout<<"Calculando fib("<< n<<")"<<std::endl;
 
     if(n == 0){
@@ -12,6 +11,7 @@ int fibonacci(int n){
         std::cout<<"Fib(1) = 1 (PARADA!)"<<std::endl;
         return 1;
     }
+    
 
     std::cout<<"Fib("<<n<<") = Fib("<<(n-1)<<") + fib("<<(n-2)<<")\n";
     int resultado = fibonacci(n - 1) + fibonacci(n - 2);
@@ -20,7 +20,6 @@ int fibonacci(int n){
     }
 
 int main(){
-    
     fibonacci(4);
 
     return 0;
