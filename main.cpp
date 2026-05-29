@@ -1,26 +1,17 @@
 #include<iostream>
 
-int fibonacci(int n){   // exemplificação da conta(soma) do fibonacci 
-    std::cout<<"Calculando fib("<< n<<")"<<std::endl;
+int contarDigitos( int n){
+    if(n == 0) return 0;
 
-    if(n == 0){
-        std::cout<<"Fib(0) = 0 (PARADA)"<<std::endl;
-        return 0;
-    }
-    if( n == 1){
-        std::cout<<"Fib(1) = 1 (PARADA!)"<<std::endl;
-        return 1;
-    }
-    
+        return 1 + contarDigitos(n / 10);
 
-    std::cout<<"Fib("<<n<<") = Fib("<<(n-1)<<") + fib("<<(n-2)<<")\n";
-    int resultado = fibonacci(n - 1) + fibonacci(n - 2);
-    std::cout<<"Fib("<<n<<") = "<< resultado << "\n";
-    return resultado; 
-    }
+}
 
 int main(){
-    fibonacci(4);
+
+    int numero = 200;
+
+    std::cout<<"O numero "<<numero<<" tem "<<contarDigitos(numero)<<" digitos.\n";
 
     return 0;
 }
