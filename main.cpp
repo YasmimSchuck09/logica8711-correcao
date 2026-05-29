@@ -9,9 +9,18 @@ int contarDigitos( int n){
 
 int main(){
 
-    int numero = 200;
+    int numeroUsuario;
 
-    std::cout<<"O numero "<<numero<<" tem "<<contarDigitos(numero)<<" digitos.\n";
+    std::cout<<"Digite um numero inteiro: "<<std::endl;
+    std::cin>>numeroUsuario;
+
+    if(numeroUsuario == 0){
+        std::cout<<"O numero 0 tem 1 digito. \n";
+    }else{
+        std::cout<<"O numero "<<numeroUsuario<<" tem "<<contarDigitos(numeroUsuario)<<" digitos."<<std::endl;
+    }
+
+    std::cout<<"O numero "<<numeroUsuario<<" tem "<<contarDigitos(numeroUsuario)<<" digitos.\n";
 
     return 0;
 }
