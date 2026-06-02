@@ -1,19 +1,17 @@
 #include<iostream>
 #include<string>
+#include<cctype>
 
-bool ehPalindromo(std:: string s){
-    int inicio = 0;
-    int fim = s.length() - 1;
-
-    while(inicio < fim){
-        if(s[inicio] != s[fim]){
-            return false;
-        }
-        inicio++;
-        fim--;
+bool ehPalindromo(std:: string s, int inicio, int fim ){
+    if(inicio >= fim){
+        return true;
     }
-    return true;
+    if(s[inicio] != s[fim]){
+        return false;
+    }
+    return ehPalindromo(s, inicio + 1, fim - 1); 
 }
+
 
 int main(){
 
@@ -21,12 +19,10 @@ std:: string palavra;
 
     std::cout<<"Digite uma palavra: "<<std::endl;
     std::cin>>palavra;
-
-   for(int i = 0; i < palavra.length(); i++){
-    palavra[i] = std::tolower(palavra[i]);
-   }
-
-   if(ehPalindromo(palavra)){
+for(char &c : palavra){
+    c = std::tolower(c);
+}
+   if(ehPalindromo(palavra, 0, palavra.length() - 1)){
     std::cout<<"É palindromo!"<<std::endl;
    }else{
     std::cout<<"Nao é palindromo!"<<std::endl;
