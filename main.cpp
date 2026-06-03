@@ -1,30 +1,34 @@
 #include<iostream>
 #include<string>
 
-struct Pessoa{
-    std:: string nome;
-    int idade;
-    float altura;
+struct Aluno{
+    std::string nome;
+    float nota1;
+    float nota2;
 };
+
+float calcularMedia(Aluno a){
+    return (a.nota1 + a.nota2) / 2;
+}
 
 int main(){
 
-    Pessoa p1;
+std::string aluno;
+float nota1;
+float nota2;
 
-    p1.nome = "Yasmim!";
-    p1.idade = 17;
-    p1.altura = 1.65;
+    std::cout<<"Digite o nome do aluno: "<<std::endl;
+    std::cin>>aluno;
 
-    std::cout<<"Nome: "<<p1.nome<<std::endl;
-    std::cout<<"Idade: "<<p1.idade<<std::endl;
-    std::cout<<"Altura: "<<p1.altura<<std::endl;
+    std::cout<<"Determine a primeira nota do aluno: "<<nota1<<std::endl;
+    std::cin>>nota1;
 
-    // PODERIA SER FEITO TAMBEM: 
+    std::cout<<"Determine a segunda nota do aluno: "<<nota2<<std::endl;
+    std::cin>>nota2;
 
-    // Pessoa p1 = {"Yasmim", 17, 1.65};
-    // Pessoa p2 = {"Danielly", 20, 1.70};
-    // std::cout<<"p1.nome<<" tem ""<<p1.idade<<" anos "<<" e mede "<<p1.altura<<"m"<<std::endl;
+    std::cout<<"Nome do aluno: "<<aluno<<" possui 1 nota como: "<<nota1<<" e sua nota 2 e: "<<nota2<<" !"<<std::endl;
 
+    // float media = calcularMedia(aluno);  
 
     return 0;
 }
