@@ -3,32 +3,20 @@
 
 struct Aluno{
     std::string nome;
-    float nota1;
-    float nota2;
+    float nota; 
 };
-
-float calcularMedia(Aluno a){
-    return (a.nota1 + a.nota2) / 2;
-}
 
 int main(){
 
-std::string aluno;
-float nota1;
-float nota2;
+    Aluno alunos[3]={
+        {"Henrique", 8.5},
+        {"Paula", 9.0},
+        {"Juliana", 7.0},
+    };
 
-    std::cout<<"Digite o nome do aluno: "<<std::endl;
-    std::cin>>aluno;
-
-    std::cout<<"Determine a primeira nota do aluno: "<<nota1<<std::endl;
-    std::cin>>nota1;
-
-    std::cout<<"Determine a segunda nota do aluno: "<<nota2<<std::endl;
-    std::cin>>nota2;
-
-    std::cout<<"Nome do aluno: "<<aluno<<" possui 1 nota como: "<<nota1<<" e sua nota 2 e: "<<nota2<<" !"<<std::endl;
-
-    // float media = calcularMedia(aluno);  
+    for(int i = 0; i < 3; i++){
+        std::cout<<alunos[i].nome<<": "<<alunos[i].nota<<std::endl;
+    }
 
     return 0;
 }
