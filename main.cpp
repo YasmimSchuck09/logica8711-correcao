@@ -23,5 +23,13 @@ int main(){
     std::cout<<time1<<" "<<gols1<<" x "<<gols2<<" "<<time2<<std::endl;
     std::cout<<std::endl;
 
+    if(gols1 > gols2){
+        std::cout<<"O time "<<time1<<" ganhou do time "<<time2<<" !"<<std::endl;
+    }else if(gols2 > gols1){
+        std::cout<<"O time "<<time2<<" ganhou do time "<<time1<<" !"<<std::endl;
+    }else{
+        std::cout<<"O jogo ficou com o placar empatado!"<<std::endl;
+    }
+
     return 0;
-}
+    }
