@@ -1,13 +1,17 @@
 #include<iostream>
 
-// 6. Contar elementos ======================================
-// Leia um array com 10 números e exiba quantos elementos tem.
-#include<string>
-
+// 7. Exibir pares =======================
+// Leia 10 números e exiba apenas os pares.
 int main(){
 
-int num[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-int tamanho = sizeof(num) / sizeof(num[0]);
-std::cout<<tamanho<<std::endl;
-      return 0;
+int numeros[10] = {1,2,3,4,5,6,7,8,9,10};
+std::cout<<"==== NUMEROS PARES ====="<<std::endl;
+std::cout<<std::endl;
+std::cout<<"Pares: ";
+for(int i = 0; i < 10; i++){
+    if(numeros[i] % 2 == 0){
+        std::cout<<numeros[i]<<" ";
+    }
+}
+    return 0;
 }
