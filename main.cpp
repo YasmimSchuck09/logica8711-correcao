@@ -1,15 +1,14 @@
 #include<iostream>
 
-// 7. Exibir pares =======================
-// Leia 10 números e exiba apenas os pares.
+// 8. Exibir ímpares =======================
+// Leia 10 números e exiba apenas os ímpares.
 int main(){
-
 int numeros[10] = {1,2,3,4,5,6,7,8,9,10};
-std::cout<<"==== NUMEROS PARES ====="<<std::endl;
+std::cout<<"==== NUMEROS IMPARES ====="<<std::endl;
 std::cout<<std::endl;
-std::cout<<"Pares: ";
+std::cout<<"Impares: ";
 for(int i = 0; i < 10; i++){
-    if(numeros[i] % 2 == 0){
+    if(numeros[i] % 2 != 0){
         std::cout<<numeros[i]<<" ";
     }
 }
