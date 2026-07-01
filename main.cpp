@@ -1,16 +1,26 @@
 #include<iostream>
 
-// 8. Exibir ímpares =======================
-// Leia 10 números e exiba apenas os ímpares.
+// 9. Inverter array ========================
+// Leia 5 números e exiba-os em ordem inversa.
 int main(){
-int numeros[10] = {1,2,3,4,5,6,7,8,9,10};
-std::cout<<"==== NUMEROS IMPARES ====="<<std::endl;
-std::cout<<std::endl;
-std::cout<<"Impares: ";
-for(int i = 0; i < 10; i++){
-    if(numeros[i] % 2 != 0){
-        std::cout<<numeros[i]<<" ";
+    int num[5];
+    int topo = -1;
+
+    std::cout<<"===== Numeros ====="<<std::endl;
+    std::cout<<std::endl;
+    num[0] = 10;
+    num[1] = 20;
+    num[2] = 30;
+    num[3] = 40;
+    num[4] = 50;
+    topo = 4;
+
+    std::cout<<"Ordem dos numeros: 10, 20, 30, 40, 50"<<std::endl;
+    std::cout<<std::endl;
+    std::cout<<"Devolvendo..."<<std::endl;
+    while(topo >= 0){
+        std::cout<<"Removido: "<<num[topo]<<std::endl;
+        topo--;
     }
-}
     return 0;
 }
