@@ -1,23 +1,13 @@
 #include<iostream>
 
-// 5. Calcular média =====================
-// Leia 5 números, calcule a média e exiba.
+// 6. Contar elementos ======================================
+// Leia um array com 10 números e exiba quantos elementos tem.
+#include<string>
 
+int main(){
 
-float calcularMedia(int numeros[], int tamanho) {
-int soma = 0;
-for (int i = 0; i < tamanho; i++) {
-soma += numeros[i];
-}
-return soma / (float)tamanho;
-}
-int main() {
-int numeros[5];
-for (int i = 0; i < 5; i++) {
-std::cout<<"Digite um numero: "<<std::endl;
-std::cin>>numeros[i];
-}
-float media = calcularMedia(numeros, 5);
-std::cout << "A media dos valores e: " << media << std::endl;
-return 0;
+int num[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+int tamanho = sizeof(num) / sizeof(num[0]);
+std::cout<<tamanho<<std::endl;
+      return 0;
 }
