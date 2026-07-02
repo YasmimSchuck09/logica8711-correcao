@@ -1,34 +1,26 @@
-// 11. Buscar elemento ============================================================
-// Leia 10 números e procure por um número específico. Se encontrar, exiba a posição.
 #include<iostream>
 
-int main(){
-int numeros[] = {10,20,30,40,50,60,70,80,90,100};
-int tamanho = 10;
-int buscado;
+// 12. Números acima da média ===================================
+// Leia 8 números, calcule a média e exiba quais estão acima dela.
 
-std::cout<<"==== Buscar numero ===="<<std::endl;
-std::cout<<std::endl;
-std::cout<<"Array: ";
-for(int i = 0; i < tamanho; i++){
-    std::cout<<numeros[i]<<" ";
-}
-std::cout<<std::endl;
-std::cout<<"Digite o numero a buscar: ";
-std::cin>>buscado;
+int main() {
+    int numeros[8] = {1,2,3,4,5,6,7,8};
+    int soma = 0;
 
-int posicao = -1;
-for(int i = 0; i < tamanho; i++){
-    if(numeros[i] == buscado){
-        posicao = i;
-        break;
+    std::cout << "==== NUMEROS ACIMA DA MEDIA ====" << std::endl;
+    for (int i = 0; i < 8; i++) {
+        soma += numeros[i];
     }
-}
+    float media = soma / 8.0; // pois tem 8 valores
+
     std::cout<<std::endl;
-if(posicao != -1){
-    std::cout<<"Encontrado na posicao "<<posicao<<std::endl;
-}else{
-    std::cout<<"Não encontrado!"<<std::endl;
-}
+    std::cout<<"Media: "<<media<<std::endl;
+    std::cout << "Numeros acima da media: ";
+    for (int i = 0; i < 8; i++) {
+        if (numeros[i] > media) {
+            std::cout << numeros[i] << " ";
+        }
+    }
+    std::cout << std::endl;
     return 0;
 }
