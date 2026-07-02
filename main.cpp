@@ -1,35 +1,30 @@
 #include<iostream>
+#include<vector>
 
-// 13. Maior e menor ==========================================================
-// Leia 10 números e encontre tanto o maior quanto o menor em um mesmo programa.
-     
-    int encontrarMaior(int* arr, int tamanho)
-    {
-        int maior = arr[0];
-        for(int i = 1; i < tamanho; i++){
-        if(arr[i] > maior){
-            maior = arr[i];
-        }
-    }
-    return maior;
-    }
+int main(){
 
-    int encontrarMenor(int* arr, int tamanho)
-    {
-     int menor = arr[0];
-    for(int i = 1; i < tamanho; i++){
-        if(arr[i] < menor){
-            menor = arr[i];
-        }
-    }
-    return menor;
-    } 
+    std::vector<int>numeros;
+
+    std::cout<<"===== VECTOR (Arraylist em C++) ====="<<std::endl;
+
+    numeros.push_back(10);
+    numeros.push_back(20);
+    numeros.push_back(30);
     
-    int main(){
-        int arr[] = {1,2,3,4,5,6,7,8,9,10};
-        std::cout<<"O maior elemento e: "<<encontrarMaior(arr, 10)<<std::endl;
-        std::cout<<"O menor elemento e: "<<encontrarMenor(arr, 10)<<std::endl;
-
-        return 0;
+    std::cout<<"Numeros: ";
+    for(int i = 0; i < numeros.size(); i++){
+        std::cout<<numeros[i]<<" ";
     }
+    std::cout<<std::endl;
+
+    std::cout<<"Tamanho: "<<numeros.size()<<std::endl;
+
+    numeros.pop_back();
+    
+    std::cout<<"Apos remover o ultimo: ";
+    for(int i = 0; i < numeros.size(); i++){
+        std::cout<<numeros[i]<<" ";
+    }
+        return 0;
+}
 
