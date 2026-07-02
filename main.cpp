@@ -1,26 +1,34 @@
+// 11. Buscar elemento ============================================================
+// Leia 10 números e procure por um número específico. Se encontrar, exiba a posição.
 #include<iostream>
 
-// 9. Inverter array ========================
-// Leia 5 números e exiba-os em ordem inversa.
 int main(){
-    int num[5];
-    int topo = -1;
+int numeros[] = {10,20,30,40,50,60,70,80,90,100};
+int tamanho = 10;
+int buscado;
 
-    std::cout<<"===== Numeros ====="<<std::endl;
-    std::cout<<std::endl;
-    num[0] = 10;
-    num[1] = 20;
-    num[2] = 30;
-    num[3] = 40;
-    num[4] = 50;
-    topo = 4;
+std::cout<<"==== Buscar numero ===="<<std::endl;
+std::cout<<std::endl;
+std::cout<<"Array: ";
+for(int i = 0; i < tamanho; i++){
+    std::cout<<numeros[i]<<" ";
+}
+std::cout<<std::endl;
+std::cout<<"Digite o numero a buscar: ";
+std::cin>>buscado;
 
-    std::cout<<"Ordem dos numeros: 10, 20, 30, 40, 50"<<std::endl;
-    std::cout<<std::endl;
-    std::cout<<"Devolvendo..."<<std::endl;
-    while(topo >= 0){
-        std::cout<<"Removido: "<<num[topo]<<std::endl;
-        topo--;
+int posicao = -1;
+for(int i = 0; i < tamanho; i++){
+    if(numeros[i] == buscado){
+        posicao = i;
+        break;
     }
+}
+    std::cout<<std::endl;
+if(posicao != -1){
+    std::cout<<"Encontrado na posicao "<<posicao<<std::endl;
+}else{
+    std::cout<<"Não encontrado!"<<std::endl;
+}
     return 0;
 }
