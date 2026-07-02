@@ -3,31 +3,20 @@
 
 int main(){
 
-    std::vector<int>numeros; // identificando as variaveis
+ std::vector<int>numeros;
 
-    std::cout<<"===== VECTOR (Arraylist em C++) ====="<<std::endl; // titulo
+ std::cout<<"===== 2. Tamanho do vector ====="<<std::endl;
+ std::cout<<std::endl;
 
-    numeros.push_back(10); // determinando todos os valores
-    numeros.push_back(20);
-    numeros.push_back(30);
-    
-    std::cout<<"Numeros: ";
-    for(int i = 0; i < numeros.size(); i++){
-        std::cout<<numeros[i]<<" ";
-    }
-    std::cout<<std::endl;
+ numeros.push_back(5);
+ numeros.push_back(10);
+ numeros.push_back(15);
 
-    std::cout<<"Tamanho: "<<numeros.size()<<std::endl;
-
-    int posicao = 2;
-    std::cout<<"Digite uma posicao: "<<std::endl;
-    std::cin>>posicao;
-    numeros.erase(numeros.begin() + posicao);
-
-    std::cout<<"Apos remover: ";
-    for(int i = 0; i < numeros.size(); i++){
-        std::cout<<numeros[i]<<" ";
-    }
+ std::cout<<"Tamanho do vector: "<<numeros.size()<<std::endl;
+ std::cout<<"Elementos: ";
+ for(int i = 0; i < numeros.size(); i++){
+    std::cout<<numeros[i]<<" ";
+ }
         return 0;
 }
 
