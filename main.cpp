@@ -5,25 +5,19 @@ int main(){
 
 std::vector<int>numeros; // variaveis
 
-std::cout<<"===== Remover elemento especifico ====="<<std::endl;
+std::cout<<"===== Limpar vector ====="<<std::endl;
 
 numeros.push_back(10);
 numeros.push_back(20);
 numeros.push_back(30);
-numeros.push_back(40);
 
-std::cout<<"Antes: ";
-for(int i = 0; i < numeros.size(); i++){
-    std::cout<<numeros[i]<<" ";
-}
-std::cout<<std::endl;
+std::cout<<"Tamanho antes: "<<numeros.size()<<std::endl;
 
-numeros.erase(numeros.begin() + 2);
+numeros.clear();
 
-std::cout<<"Depois: ";
-for(int i = 0; i < numeros.size(); i++){
-    std::cout<<numeros[i]<<" ";
-}
+std::cout<<"Tamanho depois: "<<numeros.size()<<std::endl;
+std::cout<<"Vector vazio? "<<(numeros.empty() ? "Sim" : "Nao")<<std::endl;
+
         return 0;
 }
 
