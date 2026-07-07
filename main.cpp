@@ -3,34 +3,28 @@
 
 int main(){
 
-std::vector<int>numeros; // variaveis
+    std::vector<int>numeros;
+    int quantidade;
 
-std::cout<<"Buscar elemento: "<<std::endl;
+    std::cout<<"Adicionar usuario"<<std::endl;
 
-numeros.push_back(100);
-numeros.push_back(200);
-numeros.push_back(300);
-numeros.push_back(400);
+    std::cout<<"Quantos numeros?"<<std::endl;
+    std::cin>>quantidade;
 
-std::cout<<"Vector: ";
-for(int i = 0; i < numeros.size(); i++){
-    std::cout<<numeros[i]<<" "; // aqui estou mostrando todos os numeros que foram determinados acima
-}
+    for(int i = 0; i < quantidade; i++){
+        int numero; 
+        
+        std::cout<<"Digite o numero "<<(i + 1)<<": ";
+        std::cin>>numero;
 
-int buscado = 300;
-int posicao = -1;
-
-for(int i = 0; i < numeros.size(); i++){ 
-    if(numeros[i] == buscado){ //se um dos numeros for igual a 300, mostrar sua posição
-        posicao = i;
-        break;
+        numeros.push_back(numero);
     }
-}
-if(posicao != -1){ 
-    std::cout<<"\nNumero "<<buscado<<" encontrado na posicao "<<posicao<<std::endl;
-}else{
-    std::cout<<"\nNumero não encontrado!"<<std::endl;
-}
-        return 0;
+
+    std::cout<<"Numeros adicionados: ";
+    for(int i = 0; i < numeros.size(); i++){
+        std::cout<<numeros[i]<<" ";
+    }
+    
+    return 0;
 }
 
