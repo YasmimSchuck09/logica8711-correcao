@@ -3,36 +3,25 @@
 
 int main(){
     std::vector<int>numeros;
-    int pares;
-    int impares;
-    
-    std::cout<<"Impares e pares: "<<std::endl;
+    std::cout<<"Inverter o vector: "<<std::endl;
 
-    numeros.push_back(5);
     numeros.push_back(10);
-    numeros.push_back(15);
     numeros.push_back(20);
-    numeros.push_back(25);
+    numeros.push_back(30);
+    numeros.push_back(40);
+    numeros.push_back(50);
 
-    std::cout<<"Vector: "; // mostrar os numeros
+    std::cout<<"original: ";
     for(int i = 0; i < numeros.size(); i++){
         std::cout<<numeros[i]<<" ";
     }
-
-    std::cout<<"\nPares: ";
-    for(int i = 0; i < numeros.size(); i++){
-        if(numeros[i] % 2 == 0){
-           std::cout<<numeros[i]<<" ";
-        }
-        }
-
-    std::cout<<"\nImpares: ";
-    for(int i = 0; i < numeros.size(); i++){
-       if(numeros[i] % 2 != 0){
-            std::cout<<numeros[i]<<" ";
-          }
-        }
-
+    std::cout<<std::endl;
+    std::cout<<"Invertido: ";
+    for(int i = numeros.size() -1; i >= 0; i--){
+        std::cout<<numeros[i]<<" ";
+    }
+    std::cout<<std::endl;
+    
     return 0;
 }
 
