@@ -1,23 +1,16 @@
 #include<iostream>
 #include<cmath>
 
-
-
-    int calcularCubo(int num){
-        return static_cast<int>(std::pow(num, 3)); // pow = numero de elevação do numero
-    }
-
     int main(){
 
-        int a;
+    const double pi = 3.14;
+    int raio;
+    double area;
 
-        std::cout<<"Digite um numero inteiro: ";
-        std::cin>>a;
+    std::cout<<"Digite o raio do circulo: "<<std::endl;
+    std::cin>>raio;
 
-        int cubo = calcularCubo(a);
+    area = pi * (raio * raio);
+    std::cout<<"A area do circulo e: "<<area<<std::endl;
 
-        std::cout<<"O cubo de "<<a<<" e: "<<cubo<<std::endl;
-
-        
-    return 0;
     }
