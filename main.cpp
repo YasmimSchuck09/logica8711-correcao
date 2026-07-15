@@ -2,11 +2,14 @@
 #include<cmath>
 
     int main(){
+    int soma = 0;
 
-    std::cout<<"Numeros impares de 1 a 20: "<<std::endl;
+    std::cout<<"Soma dos numeros de 1 a 100"<<std::endl;
 
-    for(int i = 1; i <= 19; i +=2){
-        std::cout<<i<<" "<<std::endl;
+    for(int i = 1; i <= 100; i++){
+        soma = soma + i;
     }
+
+    std::cout<<"valor final e: "<<soma<<std::endl;
         return 0;
     }
