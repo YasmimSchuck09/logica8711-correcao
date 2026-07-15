@@ -1,15 +1,14 @@
 #include<iostream>
 #include<cmath>
 
-    int main(){
-    int numero;
+int main(){
+const int primeiroTermo = 1;
+const int ultimoTermo = 100;
+const int n = 100;
 
-    std::cout<<"Digite um numero: "<<std::endl;
-    std::cin>>numero;
+int soma = ((primeiroTermo + ultimoTermo) * n)/ 2;
+std::cout<<"A soma de todos os numeros de 1 a 100 e: "<<soma<<std::endl;
 
-    for(int i = 0; i <= 10; i++){
-    std::cout<<"O resultado de "<<numero<<" x "<<i<<" = "<<numero * i<<std::endl;
-    }
         return 0;
     }
     
