@@ -2,14 +2,14 @@
 #include<cmath>
 
     int main(){
-    int soma = 0;
+    int numero;
 
-    std::cout<<"Soma dos numeros de 1 a 100"<<std::endl;
+    std::cout<<"Digite um numero: "<<std::endl;
+    std::cin>>numero;
 
-    for(int i = 1; i <= 100; i++){
-        soma = soma + i;
+    for(int i = 0; i <= 10; i++){
+    std::cout<<"O resultado de "<<numero<<" x "<<i<<" = "<<numero * i<<std::endl;
     }
-
-    std::cout<<"valor final e: "<<soma<<std::endl;
         return 0;
     }
+    
